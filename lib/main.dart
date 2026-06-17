@@ -62,7 +62,7 @@ class _TodoHomePageState extends State<TodoHomePage> {
       //   foregroundColor: Colors.white,
       // ),
       appBar: AppBar(
-  title: const Text('My To-Do List'),
+  title: Text('My To-Do List (${_tasks.where((t) => !t['done']).length} pending)'),
   backgroundColor: Colors.deepPurple,
   foregroundColor: Colors.white,
   actions: [
