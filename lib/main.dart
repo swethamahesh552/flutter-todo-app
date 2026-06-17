@@ -56,11 +56,27 @@ class _TodoHomePageState extends State<TodoHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   title: const Text('My To-Do List'),
+      //   backgroundColor: Colors.deepPurple,
+      //   foregroundColor: Colors.white,
+      // ),
       appBar: AppBar(
-        title: const Text('My To-Do List'),
-        backgroundColor: Colors.deepPurple,
-        foregroundColor: Colors.white,
-      ),
+  title: const Text('My To-Do List'),
+  backgroundColor: Colors.deepPurple,
+  foregroundColor: Colors.white,
+  actions: [
+    IconButton(
+      icon: const Icon(Icons.info_outline),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const AboutScreen()),
+        );
+      },
+    ),
+  ],
+),
       body: Column(
         children: [
           Padding(
@@ -141,6 +157,79 @@ class _TodoHomePageState extends State<TodoHomePage> {
                   ),
           ),
         ],
+      ),
+    );
+  }
+}
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('About'),
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.deepPurple,
+              child: Icon(Icons.check_circle, size: 50, color: Colors.white),
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              'Flutter To-Do App',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Version 1.0.0',
+              style: TextStyle(fontSize: 14, color: Colors.grey),
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              'About this app',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'A simple and clean To-Do Task Manager built with Flutter. '
+              'Add tasks, mark them as done, and delete them easily.',
+              style: TextStyle(fontSize: 14, color: Colors.grey, height: 1.6),
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              'Developer',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Swetha',
+              style: TextStyle(fontSize: 14, color: Colors.grey),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              'github.com/swethamahesh552',
+              style: TextStyle(fontSize: 14, color: Colors.deepPurple),
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              'Tech Stack',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              '• Flutter\n• Dart\n• Material 3',
+              style: TextStyle(fontSize: 14, color: Colors.grey, height: 1.8),
+            ),
+          ],
+        ),
       ),
     );
   }
