@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'To-Do App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
       ),
       home: const TodoHomePage(),
@@ -63,7 +63,7 @@ class _TodoHomePageState extends State<TodoHomePage> {
       // ),
       appBar: AppBar(
   title: Text('My To-Do List (${_tasks.where((t) => !t['done']).length} pending)'),
-  backgroundColor: Colors.deepPurple,
+  backgroundColor:Colors.teal,
   foregroundColor: Colors.white,
   actions: [
     IconButton(
