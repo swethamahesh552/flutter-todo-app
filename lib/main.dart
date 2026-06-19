@@ -56,14 +56,10 @@ class _TodoHomePageState extends State<TodoHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('My To-Do List'),
-      //   backgroundColor: Colors.deepPurple,
-      //   foregroundColor: Colors.white,
-      // ),
+    
       appBar: AppBar(
   title: Text('My To-Do List (${_tasks.where((t) => !t['done']).length} pending)'),
-  backgroundColor:Colors.teal,
+  backgroundColor:Colors.blue,
   foregroundColor: Colors.white,
   actions: [
     IconButton(
