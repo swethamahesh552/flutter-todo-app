@@ -109,14 +109,33 @@ class _TodoHomePageState extends State<TodoHomePage> {
             ),
           ),
           Expanded(
-            child: _tasks.isEmpty
-                ? const Center(
-                    child: Text(
-                      'No tasks yet!\nAdd something above 😊',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
-                    ),
-                  )
+            child:_tasks.isEmpty
+    ? Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.checklist_rtl,
+              size: 80,
+              color: Colors.blue.shade100,
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'No tasks yet!',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey,
+              ),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              'Add something above 😊',
+              style: TextStyle(fontSize: 14, color: Colors.grey),
+            ),
+          ],
+        ),
+      )
                 : ListView.builder(
                     itemCount: _tasks.length,
                     padding: const EdgeInsets.symmetric(horizontal: 16),
