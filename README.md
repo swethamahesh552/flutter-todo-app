@@ -1,6 +1,6 @@
 # Flutter To-Do App ✅
 
-A simple and clean To-Do Task Manager built with Flutter.
+A simple and clean To-Do Task Manager built with Flutter — featuring task counting, a custom theme, and a polished empty state.
 
 ## Screenshots
 
@@ -12,12 +12,15 @@ A simple and clean To-Do Task Manager built with Flutter.
 - ➕ Add tasks
 - ✅ Mark tasks as done
 - 🗑️ Delete tasks
-- Clean Material 3 UI
+- 🔢 Live pending task counter in the app bar
+- ℹ️ About screen with app & developer info
+- 🎨 Custom blue Material 3 theme
+- 📋 Polished empty state with icon
 
 ## How to Run
 
 ```bash
-git clone https://github.com/swetha/flutter-todo-app.git
+git clone https://github.com/swethamahesh552/flutter-todo-app.git
 cd flutter-todo-app
 flutter pub get
 flutter run
@@ -28,5 +31,10 @@ flutter run
 - Dart
 - Material 3
 
+## Roadmap
+- [ ] Add local storage (save tasks after closing app)
+- [ ] Add due dates for tasks
+- [ ] Add task categories/priority
+
 ## Author
-Swethamahesh552 — github.com/swethamahesh552
+Swetha — [github.com/swethamahesh552](https://github.com/swethamahesh552)
